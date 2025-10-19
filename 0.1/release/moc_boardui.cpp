@@ -51,7 +51,8 @@ static constexpr auto qt_meta_stringdata_ZN7BoardUIE = QtMocHelpers::stringData(
     "left_click_piece",
     "left_click_promotion",
     "type",
-    "capture_piece_dropped"
+    "capture_piece_dropped",
+    "move_received"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -63,7 +64,7 @@ Q_CONSTINIT static const uint qt_meta_data_ZN7BoardUIE[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       5,   14, // methods
+       6,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -71,17 +72,19 @@ Q_CONSTINIT static const uint qt_meta_data_ZN7BoardUIE[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    4,   44,    2, 0x0a,    1 /* Public */,
-       7,    2,   53,    2, 0x0a,    6 /* Public */,
-      10,    2,   58,    2, 0x0a,    9 /* Public */,
-      11,    3,   63,    2, 0x0a,   12 /* Public */,
-      13,    4,   70,    2, 0x0a,   16 /* Public */,
+       1,    4,   50,    2, 0x0a,    1 /* Public */,
+       7,    2,   59,    2, 0x0a,    6 /* Public */,
+      10,    2,   64,    2, 0x0a,    9 /* Public */,
+      11,    3,   69,    2, 0x0a,   12 /* Public */,
+      13,    4,   76,    2, 0x0a,   16 /* Public */,
+      14,    4,   85,    2, 0x0a,   21 /* Public */,
 
  // slots: parameters
     QMetaType::Void, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int,    3,    4,    5,    6,
     QMetaType::Void, QMetaType::Int, QMetaType::Int,    8,    9,
     QMetaType::Void, QMetaType::Int, QMetaType::Int,    8,    9,
     QMetaType::Void, QMetaType::Int, QMetaType::Int, QMetaType::QString,    8,    9,   12,
+    QMetaType::Void, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int,    3,    4,    5,    6,
     QMetaType::Void, QMetaType::Int, QMetaType::Int, QMetaType::Int, QMetaType::Int,    3,    4,    5,    6,
 
        0        // eod
@@ -120,6 +123,12 @@ Q_CONSTINIT const QMetaObject BoardUI::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        // method 'move_received'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
         QtPrivate::TypeAndForceComplete<int, std::false_type>
     >,
     nullptr
@@ -135,6 +144,7 @@ void BoardUI::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, voi
         case 2: _t->left_click_piece((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2]))); break;
         case 3: _t->left_click_promotion((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3]))); break;
         case 4: _t->capture_piece_dropped((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[4]))); break;
+        case 5: _t->move_received((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[4]))); break;
         default: ;
         }
     }
@@ -159,14 +169,14 @@ int BoardUI::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 5)
+        if (_id < 6)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 5;
+        _id -= 6;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 5)
+        if (_id < 6)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 5;
+        _id -= 6;
     }
     return _id;
 }

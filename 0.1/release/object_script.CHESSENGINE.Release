@@ -5,6 +5,7 @@ release/chessboard.o
 release/king.o
 release/knight.o
 release/main.o
+release/mainmenu.o
 release/mainwindow.o
 release/networkmanager.o
 release/pawn.o
@@ -18,6 +19,7 @@ release/squarelabel.o
 release/themes.o
 release/qrc_img.o
 release/moc_boardui.o
+release/moc_mainmenu.o
 release/moc_mainwindow.o
 release/moc_networkmanager.o
 release/moc_piecelabel.o
